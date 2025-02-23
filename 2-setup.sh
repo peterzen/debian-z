@@ -11,15 +11,15 @@ xdg-user-dirs-update
 # cd build && cpack -G DEB && sudo dpkg -i nvim-linux64.deb
 
 # Installing i3 gaps
-cd
-cd Downloads
-git clone https://github.com/Airblader/i3 i3-gaps
-cd i3-gaps
-mkdir -p build && cd build
-meson --prefix /usr/local
-ninja
-sudo ninja install
-
+#cd
+#cd Downloads
+#git clone https://github.com/Airblader/i3 i3-gaps
+#cd i3-gaps
+#mkdir -p build && cd build
+#meson --prefix /usr/local
+#ninja
+#sudo ninja install
+#
 # Installing dependencies for Ly Console Manager
 # sudo nala install -y libpam0g-dev libxcb-xkb-dev
 
