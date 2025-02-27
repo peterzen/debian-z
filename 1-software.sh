@@ -7,7 +7,7 @@
 PKG_LIST="xdg-user-dirs tmux net-tools scdaemon usbutils qemu-guest-agent spice-vdagent lightdm htop firefox-esr thunar"
 
 # X Window System and Input
-PKG_LIST="$PKG_LIST xorg xbacklight xinput xorg-dev xdotool brightnessctl i3 i3blocks i3status gnome-terminal"
+PKG_LIST="$PKG_LIST xorg xbacklight xinput xorg-dev xdotool brightnessctl i3 i3blocks i3status gnome-terminal papirus-icon-theme"
 
 # Python
 PKG_LIST="$PKG_LIST python3-pip"
