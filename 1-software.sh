@@ -1,7 +1,10 @@
 #!/bin/bash
 
+# fix cloud kernel
+sudo apt-get -y install linux-image-amd64
+sudo apt-get purge linux-image-amd64-cloud
 # my essentials
-sudo apt-get install -y xdg-user-dirs tmux net-tools scdaemon usbutils qemu-guest-agent spice-vdagent
+sudo apt-get install -y xdg-user-dirs tmux net-tools scdaemon usbutils qemu-guest-agent spice-vdagent lightdm
 
 # X Window System and Input
 sudo apt-get install -y xorg xbacklight xinput xorg-dev xdotool brightnessctl i3 i3blocks i3status xfce4-terminal
