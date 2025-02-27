@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # my essentials
-sudo apt-get install xdg-user-dirs tmux net-tools nm-tray
+sudo apt-get install xdg-user-dirs tmux net-tools scdaemon usbutils
 
 # X Window System and Input
 sudo apt-get install -y xorg xbacklight xinput xorg-dev xdotool brightnessctl
