@@ -4,7 +4,7 @@
 sudo apt-get install xdg-user-dirs tmux net-tools scdaemon usbutils
 
 # X Window System and Input
-sudo apt-get install -y xorg xbacklight xinput xorg-dev xdotool brightnessctl i3 i3blocks i3status
+sudo apt-get install -y xorg xbacklight xinput xorg-dev xdotool brightnessctl i3 i3blocks i3status xfce4-terminal
 
 # Python
 sudo apt-get install -y python3-pip
