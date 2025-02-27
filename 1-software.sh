@@ -89,6 +89,8 @@ sudo apt-get install -y zathura
 # Disk Utilities and Cleaning Tools
 sudo apt-get install -y gnome-disk-utility bleachbit
 
+# install fonts
+sudo apt-get install -y fonts-font-awesome fonts-powerline fonts-noto fonts-sil-scheherazade fonts-dejavu
 
 # Neovim Build prerequisites
 #sudo apt-get install -y ninja-build gettext cmake curl python3.11-venv
