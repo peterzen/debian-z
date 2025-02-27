@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # my essentials
-sudo apt-get install xdg-user-dirs tmux net-tools scdaemon usbutils
+sudo apt-get install xdg-user-dirs tmux net-tools scdaemon usbutils qemu-guest-agent spice-vdagent
 
 # X Window System and Input
 sudo apt-get install -y xorg xbacklight xinput xorg-dev xdotool brightnessctl i3 i3blocks i3status xfce4-terminal
