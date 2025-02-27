@@ -4,7 +4,7 @@
 #sudo apt-get -y purge linux-image-cloud-amd64
 #sudo apt-get -y install linux-image-amd64
 
-PKG_LIST="xdg-user-dirs tmux net-tools scdaemon usbutils qemu-guest-agent spice-vdagent lightdm htop firefox-esr"
+PKG_LIST="xdg-user-dirs tmux net-tools scdaemon usbutils qemu-guest-agent spice-vdagent lightdm htop firefox-esr thunar"
 
 # X Window System and Input
 PKG_LIST="$PKG_LIST xorg xbacklight xinput xorg-dev xdotool brightnessctl i3 i3blocks i3status gnome-terminal"
@@ -86,7 +86,7 @@ PKG_LIST="$PKG_LIST  zathura"
 PKG_LIST="$PKG_LIST  gnome-disk-utility bleachbit"
 
 # install fonts
-PKG_LIST="$PKG_LIST  fonts-font-awesome fonts-powerline fonts-noto fonts-sil-scheherazade fonts-dejavu"
+PKG_LIST="$PKG_LIST  fonts-font-awesome fonts-hack"
 
 sudo apt-get -y install $PKG_LIST
 
