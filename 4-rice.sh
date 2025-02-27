@@ -88,8 +88,3 @@ source optional/keyboard_layout.sh
 source optional/default_apps.sh
 
 
-sudo tee /etc/udev/rules.d/50-x-resize.rules << EOF
-ACTION=="change",KERNEL=="card0", SUBSYSTEM=="drm", RUN+="/usr/local/bin/x-resize"
-EOF
-
-sudo cp optional/x-resize /usr/local/bin

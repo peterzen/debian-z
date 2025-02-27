@@ -3,6 +3,9 @@
 
 include $HOME/.config/i3/workspaces.conf
 include $HOME/.config/i3/colors.conf
+
+exec --no-startup-id spice-vdagent
+
 exec --no-startup-id ibus-daemon -drx
 exec_always feh --bg-fill ~/.config/wallpapers/moon.jpg
 #exec_always --no-startup-id ~/.fehbg

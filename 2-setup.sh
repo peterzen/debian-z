@@ -47,3 +47,23 @@ Icon=i3
 Type=XSession
 EOF
 sudo cp ./temp /usr/share/xsessions/i3.desktop;rm ./temp
+
+
+sudo tee /etc/udev/rules.d/50-x-resize.rules << EOF
+ACTION=="change",KERNEL=="card0", SUBSYSTEM=="drm", RUN+="/usr/local/bin/x-resize"
+EOF
+
+sudo cp optional/x-resize /usr/local/bin
+
+sudo tee /etc/lightdm/lightdm.conf << EOF
+[LightDM]
+
+[Seat:*]
+autologin-user=user
+autologin-user-timeout=0
+
+[XDMCPServer]
+
+[VNCServer]
+EOF
+
