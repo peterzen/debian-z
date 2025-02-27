@@ -1,114 +1,95 @@
 #!/bin/bash
 
 # fix cloud kernel
-sudo apt-get -y purge linux-image-cloud-amd64
-sudo apt-get -y install linux-image-amd64
+#sudo apt-get -y purge linux-image-cloud-amd64
+#sudo apt-get -y install linux-image-amd64
 
-# my essentials
-sudo apt-get install -y xdg-user-dirs tmux net-tools scdaemon usbutils qemu-guest-agent spice-vdagent lightdm
+PKG_LIST="xdg-user-dirs tmux net-tools scdaemon usbutils qemu-guest-agent spice-vdagent lightdm htop"
 
 # X Window System and Input
-sudo apt-get install -y xorg xbacklight xinput xorg-dev xdotool brightnessctl i3 i3blocks i3status xfce4-terminal
+PKG_LIST="$PKG_LIST xorg xbacklight xinput xorg-dev xdotool brightnessctl i3 i3blocks i3status xfce4-terminal"
 
 # Python
-sudo apt-get install -y python3-pip
+PKG_LIST="$PKG_LIST python3-pip"
 
 # npm
-#sudo apt-get install -y npm
+#sudo PKG_LIST="$PKG_LIST  npm
 
 # Java
 #sudo apt-get install default-jdk
 
 # CPU Microcode Updates (if you have amd cpu uncomment the first one and comment the second one)
-#sudo apt-get install -y amd64-microcode
-#sudo apt-get install -y intel-microcode
+#sudo PKG_LIST="$PKG_LIST  amd64-microcode
+#sudo PKG_LIST="$PKG_LIST  intel-microcode
 
 # Network Management
-sudo apt-get install -y network-manager-gnome
+PKG_LIST="$PKG_LIST network-manager-gnome"
 
 # Appearance and Customization
-sudo apt-get install -y lxappearance qt5ct arandr xclip
+PKG_LIST="$PKG_LIST lxappearance qt5ct arandr xclip"
 
 # System Utilities
-sudo apt-get install -y dialog mtools dosfstools avahi-daemon acpi acpid gvfs-backends
-sudo systemctl enable avahi-daemon
-sudo systemctl enable acpid
+PKG_LIST="$PKG_LIST dialog mtools dosfstools avahi-daemon acpi acpid gvfs-backends"
 
 # Terminal Emulators
-#sudo apt-get install -y alacritty
+#sudo PKG_LIST="$PKG_LIST  alacritty
 
 # Modern replacement for ls
-sudo apt-get install -y exa
-
-# File Managers
-sudo apt-get install -y pcmanfm ranger
+PKG_LIST="$PKG_LIST exa pcmanfm ranger"
 
 # XFCE Settings
-sudo apt-get install -y xfce4-settings xfce4-power-manager
+PKG_LIST="$PKG_LIST xfce4-settings xfce4-power-manager"
 
 # Audio Control
-sudo apt-get install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
+PKG_LIST="$PKG_LIST pulseaudio alsa-utils pavucontrol volumeicon-alsa"
 
 # System Information and Monitoring
-sudo apt-get install -y htop
-
-# sudo apt-get install -y neofetch
+PKG_LIST="$PKG_LIST  htop"
 
 # Screenshots
-sudo apt-get install -y flameshot
+PKG_LIST="$PKG_LIST  flameshot"
 
 # Printer Support
-#sudo apt-get install -y cups simple-scan
+#sudo PKG_LIST="$PKG_LIST  cups simple-scan
 #sudo systemctl enable cups
 
 # Bluetooth Support
-#sudo apt-get install -y bluez blueman
+#sudo PKG_LIST="$PKG_LIST  bluez blueman
 #sudo systemctl enable bluetooth
 
 # Messaging
-#sudo apt-get install -y telegram-desktop
+#sudo PKG_LIST="$PKG_LIST  telegram-desktop
 
 # Menu and Window Managers
-sudo apt-get install -y sxhkd numlockx rofi dunst libnotify-bin picom dmenu polybar dbus-x11
+PKG_LIST="$PKG_LIST  sxhkd numlockx rofi dunst libnotify-bin picom dmenu polybar dbus-x11"
 
 # Archive Management
-sudo apt-get install -y unzip file-roller
+PKG_LIST="$PKG_LIST  unzip file-roller"
 
 # Text Editors
-sudo apt-get install -y vim-gtk3 mousepad
+PKG_LIST="$PKG_LIST  vim-gtk3 mousepad"
 
 # Image Viewer
-sudo apt-get install -y viewnior feh sxiv ueberzug python3-pillow
+PKG_LIST="$PKG_LIST  viewnior feh sxiv ueberzug python3-pillow"
 #pip install pillow (for debian 11)
 
 # Media Player
-sudo apt-get install -y mpv
+PKG_LIST="$PKG_LIST  mpv"
 
 # Calculator
-sudo apt-get install -y galculator
+PKG_LIST="$PKG_LIST  galculator"
 
 # Document Viewer
-sudo apt-get install -y zathura
+PKG_LIST="$PKG_LIST  zathura"
 
 # Disk Utilities and Cleaning Tools
-sudo apt-get install -y gnome-disk-utility bleachbit
+PKG_LIST="$PKG_LIST  gnome-disk-utility bleachbit"
 
 # install fonts
-sudo apt-get install -y fonts-font-awesome fonts-powerline fonts-noto fonts-sil-scheherazade fonts-dejavu
+PKG_LIST="$PKG_LIST  fonts-font-awesome fonts-powerline fonts-noto fonts-sil-scheherazade fonts-dejavu"
 
-# Neovim Build prerequisites
-#sudo apt-get install -y ninja-build gettext cmake curl python3.11-venv
-
-# Required packages for i3-gaps installation
-#sudo apt-get install -y meson dh-autoreconf libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev xcb libxcb1-dev libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev libxcb-xinerama0-dev libxkbcommon-x11-dev libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm0 libxcb-xrm-dev libxcb-shape0 libxcb-shape0-dev i3status cmake
+sudo apt-get -y install $PKG_LIST
 
 
-
-# Install Codium
-#wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
-
-##echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main' | sudo tee /etc/apt/sources.list.d/vscodium.list
-
-#sudo apt-get update
-
-#sudo apt-get install -y codium
+sudo systemctl enable avahi-daemon
+sudo systemctl enable acpid
