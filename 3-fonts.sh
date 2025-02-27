@@ -1,12 +1,12 @@
 #!/bin/bash
 
-sudo apt-get install -y fonts-font-awesome fonts-powerline fonts-noto fonts-sil-scheherazade fonts-dejavu
+#sudo apt-get install -y fonts-font-awesome fonts-powerline fonts-noto fonts-sil-scheherazade fonts-dejavu
 
-fonts_dir="$HOME/.local/share/fonts"
+#fonts_dir="$HOME/.local/share/fonts"
 
-if [[ ! -d "$fonts_dir" ]]; then
-    mkdir -p "$fonts_dir"
-fi
+#if [[ ! -d "$fonts_dir" ]]; then
+    #mkdir -p "$fonts_dir"
+#fi
 
 # cd /tmp
 # fonts=( 
@@ -21,14 +21,14 @@ fi
 #     rm $font.zip
 # done
 
-cd
-cd debian-z/fonts
-tar xzvf Hack-NerdFont.tar.gz
-unzip JetBrainsMono.zip
-mv *ttf ~/.local/share/fonts
-cd Hack-NerdFont/
-mv *ttf ~/.local/share/fonts
-cd ..
-rm -rf
+#cd
+##cd debian-z/fonts
+#tar xzvf Hack-NerdFont.tar.gz
+#unzip JetBrainsMono.zip
+#mv *ttf ~/.local/share/fonts
+#cd Hack-NerdFont/
+#mv *ttf ~/.local/share/fonts
+#cd ..
+#rm -rf
 
-fc-cache -fv
+#fc-cache -fv
