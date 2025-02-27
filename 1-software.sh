@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # fix cloud kernel
+sudo apt-get -y purge linux-image-cloud-amd64
 sudo apt-get -y install linux-image-amd64
-sudo apt-get purge linux-image-amd64-cloud
+
 # my essentials
 sudo apt-get install -y xdg-user-dirs tmux net-tools scdaemon usbutils qemu-guest-agent spice-vdagent lightdm
 
