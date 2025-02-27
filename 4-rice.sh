@@ -38,14 +38,14 @@ cp -r config/scripts/ ~/.config
 cp -r config/alacritty/ ~/.config
 cp -r config/dunst/ ~/.config
 cp -r config/rofi/ ~/.config
-# cp -r config/neofetch/ ~/.config
+cp -r config/neofetch/ ~/.config
 cp -r config/ranger/ ~/.config
 cp -r config/polybar/ ~/.config
 cp -r config/zathura/ ~/.config
-cp config/guide.pdf ~/.config
-cp config/bookmarks.txt ~/.config
-sudo cp config/ufetch /usr/bin/
-cp -r optional/synth-shell ~/.config
+#cp config/guide.pdf ~/.config
+#cp config/bookmarks.txt ~/.config
+#sudo cp config/ufetch /usr/bin/
+#cp -r optional/synth-shell ~/.config
 cp optional/.bashrc ~/
 cp optional/.inputrc ~/
 cp config/.fehbg ~/
@@ -82,7 +82,14 @@ xbindkeys -f ~/.xbindkeysrc
 cd
 cd debian-z/
 source optional/keyboard_layout.sh
-source optional/terminal_in_pcmanfm.sh
+#source optional/terminal_in_pcmanfm.sh
 #source optional/nvidia.sh
-source optional/nvim.sh
+#source optional/nvim.sh
 source optional/default_apps.sh
+
+
+sudo tee /etc/udev/rules.d/50-x-resize.rules << EOF
+ACTION=="change",KERNEL=="card0", SUBSYSTEM=="drm", RUN+="/usr/local/bin/x-resize"
+EOF
+
+sudo cp optional/x-resize /usr/local/bin
