@@ -4,7 +4,7 @@
 #sudo apt-get -y purge linux-image-cloud-amd64
 #sudo apt-get -y install linux-image-amd64
 
-PKG_LIST="xdg-user-dirs tmux net-tools scdaemon usbutils qemu-guest-agent spice-vdagent lightdm htop"
+PKG_LIST="xdg-user-dirs tmux net-tools scdaemon usbutils qemu-guest-agent spice-vdagent lightdm htop firefox-esr"
 
 # X Window System and Input
 PKG_LIST="$PKG_LIST xorg xbacklight xinput xorg-dev xdotool brightnessctl i3 i3blocks i3status xfce4-terminal"
