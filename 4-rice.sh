@@ -65,26 +65,26 @@ cp config/.gtkrc-2.0 ~/
 # Fixing the volume keys
 xbindkeys --defaults > ~/.xbindkeysrc
 
-echo '# Increase volume
-"amixer set Master 2%+"
-   XF86AudioRaiseVolume
+#echo '# Increase volume
+#"amixer set Master 2%+"
+   #XF86AudioRaiseVolume
+#
+## Decrease volume
+#"amixer set Master 2%-"
+   #XF86AudioLowerVolume
+#
+## Mute volume
+#"amixer set Master toggle"
+#XF86AudioMute' >> ~/.xbindkeysrc
 
-# Decrease volume
-"amixer set Master 2%-"
-   XF86AudioLowerVolume
-
-# Mute volume
-"amixer set Master toggle"
-XF86AudioMute' >> ~/.xbindkeysrc
-
-xbindkeys -f ~/.xbindkeysrc
+#xbindkeys -f ~/.xbindkeysrc
 #--------------------------------------------------
 cd
-cd debian-z/
-source optional/keyboard_layout.sh
+#d debian-z/
+#source optional/keyboard_layout.sh
 #source optional/terminal_in_pcmanfm.sh
 #source optional/nvidia.sh
 #source optional/nvim.sh
-source optional/default_apps.sh
+#source optional/default_apps.sh
 
 
